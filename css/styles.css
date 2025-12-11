@@ -1,4 +1,116 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #262626;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #262626;
+  width: 100%;
+  height: 64px;
+}
+.header .heading {
+  margin-left: 32px;
+  color: #01B3FF;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main .profile__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main .profile__section .picture__container {
+  margin-left: 64px;
+  margin-top: 32px;
+}
+.main .profile__section .picture__container img {
+  width: 250px;
+  height: 250px;
+}
+.main .profile__section .info__container {
+  height: 250px;
+  margin-left: 32px;
+}
+.main .profile__section .info__container .profile__name {
+  margin-top: 32px;
+  font-size: 32px;
+  color: #58FF63;
+}
+.main .profile__section .info__container .role__name {
+  color: #01B3FF;
+  font-size: 24px;
+}
+.main .profile__section .info__container .cv__buttons__container {
+  margin-top: 32px;
+}
+.main .profile__section .info__container .cv__buttons__container .cv__buttons {
+  display: flex;
+  gap: 12px;
+}
+.main .profile__section .info__container .cv__buttons__container .cv__buttons button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #58FF63;
+  font-size: 20px;
+  height: 64px;
+  padding: 5px 40px;
+  border: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+.main .profile__section .info__container .cv__buttons__container .letter__buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.main .profile__section .info__container .cv__buttons__container .letter__buttons button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #01B3FF;
+  font-size: 20px;
+  height: 64px;
+  padding: 5px 40px;
+  border: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+.main .portfolio__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 64px;
+}
+.main .portfolio__section .work__card {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #58FF63;
+}
+.main .portfolio__section .work__card img {
+  width: 300px;
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+}
+.footer p {
+  margin-bottom: 32px;
+  color: #01B3FF;
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */

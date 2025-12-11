@@ -4,20 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
+
+    <script defer src="./js/dialog.js"></script>
     <title>Vladyslav Serikov: Portfolio</title>
 </head>
 <body>
-    <header>
-        <h1>// OS_PORTFOLIO_VLADYSLAV_SERIKOV_V1.0 //</h1>
+    <header class="header">
+        <h1 class="heading">// OS_PORTFOLIO_V1.0 //</h1>
     </header>
 
-    <main>
+    <main class="main">
+        <section class="profile__section">
+            <div class="picture__container">
+                <img src="./img/1280.jpg" alt="Profile picture">
+            </div>
 
+            <div class="info__container">
+                <h2 class="profile__name">Vladyslav_Serikov</h2>
+                <p class="role__name">Front-end_Developer_Student //</p>
+                <div class="cv__buttons__container">
+                    <div class="cv__buttons">
+                        <button>Show_CV</button>
+                        <button>Download_CV</button>
+                    </div>
+                    <div class="letter__buttons">
+                        <button>Show_Cover_Letter</button>
+                        <button>Download_Cover_Letter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio__section">
+            <div class="work__card">
+                <img src="./img/screenshots/rainydays-screen.png" alt="">
+                <h3>// Project_Rainy_Days //</h3>
+                <p>Stack: HTML, CSS</p>
+                <p>Student first project using only HTML & CSS...</p>
+
+                <button class="dialog__button" data-target="modal__1">
+                    MORE INFO
+                </button>
+
+                <dialog class="modal__window" id="modal__1">
+                    <div class="left__container">
+                        <img src="" alt="Project Screenshoot">
+                        <div class="buttons__container">
+                            <a class="link__button" href="">Live Demo</a>
+                            <a class="link__button" href="">Repo Link</a>
+                        </div>
+                    </div>
+
+                    <div class="right__container">
+                        <div class="text__container">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <button class="close__dialog__button">
+                            CLOSE WINDOW
+                        </button>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="work__card">
+                <img src="./img/screenshots/museum-screen.png" alt="">
+                <h3>// Project_Community_Science_Museum //</h3>
+                <p>Stack: HTML, CSS</p>
+                <p>Student project using only HTML & CSS...</p>
+
+                <button class="dialog__button" data-target="modal__2">
+                    MORE INFO
+                </button>
+
+                <dialog class="modal__window" id="modal__2">
+                    <div class="left__container">
+                        <img src="" alt="Project Screenshoot">
+                        <div class="buttons__container">
+                            <a class="link__button" href="">Live Demo</a>
+                            <a class="link__button" href="">Repo Link</a>
+                        </div>
+                    </div>
+
+                    <div class="right__container">
+                        <div class="text__container">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <button class="close__dialog__button">
+                            CLOSE WINDOW
+                        </button>
+                    </div>
+                </dialog>
+            </div>
+
+            <div class="work__card">
+            <img src="./img/screenshots/gamehub-screen.png" alt="">
+                <h3>// Project_Game_Hub //</h3>
+                <p>Stack: HTML, CSS, JS, REST API</p>
+                <p>Student project using HTML, CSS, JS and REST API...</p>
+
+                <button class="dialog__button" data-target="modal__3">
+                    MORE INFO
+                </button>
+
+                <dialog class="modal__window" id="modal__3">
+                    <div class="left__container">
+                        <img src="" alt="Project Screenshoot">
+                        <div class="buttons__container">
+                            <a class="link__button" href="">Live Demo</a>
+                            <a class="link__button" href="">Repo Link</a>
+                        </div>
+                    </div>
+
+                    <div class="right__container">
+                        <div class="text__container">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <button class="close__dialog__button">
+                            CLOSE WINDOW
+                        </button>
+                    </div>
+                </dialog>
+            </div>
+        </section>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <p>// Created_By_Vladyslav_Serikov //</p>
     </footer>
 </body>
 </html>
