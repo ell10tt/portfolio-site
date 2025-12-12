@@ -12,7 +12,6 @@ body {
   display: flex;
   justify-content: left;
   align-items: center;
-  background-color: #262626;
   width: 100%;
   height: 64px;
 }
@@ -84,7 +83,8 @@ body {
 .main .portfolio__section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 64px;
   align-items: center;
   margin-top: 64px;
 }
@@ -95,11 +95,43 @@ body {
   justify-content: center;
   align-items: center;
   border: solid 2px #58FF63;
+  gap: 20px;
 }
 .main .portfolio__section .work__card img {
   width: 300px;
 }
-
+.main .portfolio__section .work__card h3 {
+  color: #01B3FF;
+}
+.main .portfolio__section .work__card p {
+  color: #01B3FF;
+}
+.main .portfolio__section .work__card button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #58FF63;
+  font-size: 18px;
+  height: 44px;
+  padding: 5px 30px;
+  border: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+}
+.main .portfolio__section .work__card .modal__window {
+  left: 10%;
+  top: 10%;
+  width: 80%;
+  height: 80%;
+}
+.main .portfolio__section .work__card .modal__window .modal__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .portfolio__section .work__card .modal__window .modal__container .left__container img {
+  height: 400px;
+  width: auto;
+}
 .footer {
   display: flex;
   position: absolute;
@@ -113,4 +145,15 @@ body {
   margin-bottom: 32px;
   color: #01B3FF;
   font-size: 20px;
+}
+
+#glitch-bg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #262626;
 }/*# sourceMappingURL=styles.css.map */

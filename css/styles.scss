@@ -16,7 +16,6 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    background-color: $main-color;
     width: 100%;
     height: 64px;
 
@@ -109,7 +108,8 @@ body {
     .portfolio__section {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 64px;
         align-items: center;
         margin-top: 64px;
         .work__card {
@@ -119,12 +119,100 @@ body {
             justify-content: center;
             align-items: center;
             border: solid 2px $green-color;
+            gap: 20px;
             img {
                 width: 300px;
             }
+
+            h3 {
+                color: $blue-color;
+            }
+
+            p {
+                color: $blue-color;
+            }
+
+            button {
+                font-family: "Space Grotesk", sans-serif;
+                        background-color: $green-color;
+                        font-size: 18px;
+                        height: 44px;
+                        padding: 5px 30px;
+                        border: none;
+                        clip-path: polygon(
+                            0 0,
+                            100% 0 ,
+                            100% 100%,
+                            30px 100% ,
+                            0 calc(100% - 30px)
+                        );
+            }
+
+            .modal__window {
+                left: 10%;
+                top: 10%;
+                width: 80%;
+                height: 80%;
+
+                .modal__container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .left__container {
+                        img {
+                            height: 400px;
+                            width: auto;
+                        }
+
+                        .buttons__container {
+
+                        }
+
+                        .link__button {
+
+                        }
+                    }
+
+                    .right__container {
+                        .text__container {
+                            p {
+
+                            }
+                        }
+
+                        .close__dialog__button {
+
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
     display: flex;
@@ -140,4 +228,15 @@ body {
         color: $blue-color;
         font-size: 20px;
     }
+}
+
+#glitch-bg {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $main-color;
 }

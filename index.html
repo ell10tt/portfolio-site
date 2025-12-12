@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="./css/styles.css">
 
     <script defer src="./js/dialog.js"></script>
+    <!-- <script defer src="./js/animate-bkg.js"></script> -->
     <title>Vladyslav Serikov: Portfolio</title>
 </head>
 <body>
+    <canvas id="glitch-bg"></canvas>
+
     <header class="header">
         <h1 class="heading">// OS_PORTFOLIO_V1.0 //</h1>
     </header>
@@ -26,14 +29,19 @@
 
             <div class="info__container">
                 <h2 class="profile__name">Vladyslav_Serikov</h2>
+
                 <p class="role__name">Front-end_Developer_Student //</p>
+
                 <div class="cv__buttons__container">
                     <div class="cv__buttons">
                         <button>Show_CV</button>
+
                         <button>Download_CV</button>
                     </div>
+
                     <div class="letter__buttons">
                         <button>Show_Cover_Letter</button>
+
                         <button>Download_Cover_Letter</button>
                     </div>
                 </div>
@@ -43,8 +51,11 @@
         <section class="portfolio__section">
             <div class="work__card">
                 <img src="./img/screenshots/rainydays-screen.png" alt="">
+
                 <h3>// Project_Rainy_Days //</h3>
+
                 <p>Stack: HTML, CSS</p>
+
                 <p>Student first project using only HTML & CSS...</p>
 
                 <button class="dialog__button" data-target="modal__1">
@@ -52,32 +63,54 @@
                 </button>
 
                 <dialog class="modal__window" id="modal__1">
-                    <div class="left__container">
-                        <img src="" alt="Project Screenshoot">
-                        <div class="buttons__container">
-                            <a class="link__button" href="">Live Demo</a>
-                            <a class="link__button" href="">Repo Link</a>
-                        </div>
-                    </div>
+                    <div class="modal__container">
+                        <div class="left__container">
+                            <button class="carousel__button prev__slide">
 
-                    <div class="right__container">
-                        <div class="text__container">
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            </button>
+
+                            <img src="./img/screenshots/rainydays-screen.png" 
+                            alt="Project Screenshoot">
+                            <img src="./img/screenshots/rainydays-screen.png" 
+                            alt="Project Screenshoot">
+                            <img src="./img/screenshots/rainydays-screen.png" 
+                            alt="Project Screenshoot">
+                            
+                            <button class="carousel__button next__slide">
+
+                            </button>
+                            <div class="buttons__container">
+                                <a class="link__button" href="">Live Demo</a>
+    
+                                <a class="link__button" href="">Repo Link</a>
+                            </div>
                         </div>
-                        <button class="close__dialog__button">
-                            CLOSE WINDOW
-                        </button>
+    
+                        <div class="right__container">
+                            <div class="text__container">
+                                <p></p>
+    
+                                <p></p>
+    
+                                <p></p>
+    
+                                <p></p>
+                            </div>
+                            <button class="close__dialog__button">
+                                CLOSE WINDOW
+                            </button>
+                        </div>
                     </div>
                 </dialog>
             </div>
 
             <div class="work__card">
                 <img src="./img/screenshots/museum-screen.png" alt="">
+
                 <h3>// Project_Community_Science_Museum //</h3>
+
                 <p>Stack: HTML, CSS</p>
+
                 <p>Student project using only HTML & CSS...</p>
 
                 <button class="dialog__button" data-target="modal__2">
@@ -85,24 +118,40 @@
                 </button>
 
                 <dialog class="modal__window" id="modal__2">
-                    <div class="left__container">
-                        <img src="" alt="Project Screenshoot">
-                        <div class="buttons__container">
-                            <a class="link__button" href="">Live Demo</a>
-                            <a class="link__button" href="">Repo Link</a>
-                        </div>
-                    </div>
+                    <div class="modal__container">
+                        <div class="left__container">
+                            <button class="carousel__button prev__slide">
 
-                    <div class="right__container">
-                        <div class="text__container">
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            </button>
+
+                            <img src="./img/screenshots/museum-screen.png" alt="Project Screenshoot">
+                            <img src="./img/screenshots/museum-screen.png" alt="Project Screenshoot">
+                            <img src="./img/screenshots/museum-screen.png" alt="Project Screenshoot">
+                            
+                            <button class="carousel__button next__slide">
+
+                            </button>
+                            <div class="buttons__container">
+                                <a class="link__button" href="">Live Demo</a>
+    
+                                <a class="link__button" href="">Repo Link</a>
+                            </div>
                         </div>
-                        <button class="close__dialog__button">
-                            CLOSE WINDOW
-                        </button>
+    
+                        <div class="right__container">
+                            <div class="text__container">
+                                <p></p>
+    
+                                <p></p>
+    
+                                <p></p>
+    
+                                <p></p>
+                            </div>
+                            <button class="close__dialog__button">
+                                CLOSE WINDOW
+                            </button>
+                        </div>
                     </div>
                 </dialog>
             </div>
@@ -110,7 +159,9 @@
             <div class="work__card">
             <img src="./img/screenshots/gamehub-screen.png" alt="">
                 <h3>// Project_Game_Hub //</h3>
+
                 <p>Stack: HTML, CSS, JS, REST API</p>
+
                 <p>Student project using HTML, CSS, JS and REST API...</p>
 
                 <button class="dialog__button" data-target="modal__3">
@@ -118,24 +169,41 @@
                 </button>
 
                 <dialog class="modal__window" id="modal__3">
-                    <div class="left__container">
-                        <img src="" alt="Project Screenshoot">
-                        <div class="buttons__container">
-                            <a class="link__button" href="">Live Demo</a>
-                            <a class="link__button" href="">Repo Link</a>
-                        </div>
-                    </div>
+                    <div class="modal__container">
+                        <div class="left__container">
+                            <button class="carousel__button prev__slide">
 
-                    <div class="right__container">
-                        <div class="text__container">
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                            </button>
+
+                            <img src="./img/screenshots/gamehub-screen.png" alt="Project Screenshoot">
+                            <img src="./img/screenshots/gamehub-screen.png" alt="Project Screenshoot">
+                            <img src="./img/screenshots/gamehub-screen.png" alt="Project Screenshoot">
+
+                            <button class="carousel__button next__slide">
+
+                            </button>
+
+                            <div class="buttons__container">
+                                <a class="link__button" href="">Live Demo</a>
+    
+                                <a class="link__button" href="">Repo Link</a>
+                            </div>
                         </div>
-                        <button class="close__dialog__button">
-                            CLOSE WINDOW
-                        </button>
+    
+                        <div class="right__container">
+                            <div class="text__container">
+                                <p></p>
+                                
+                                <p></p>
+    
+                                <p></p>
+                                
+                                <p></p>
+                            </div>
+                            <button class="close__dialog__button">
+                                CLOSE WINDOW
+                            </button>
+                        </div>
                     </div>
                 </dialog>
             </div>
