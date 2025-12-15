@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -115,23 +116,7 @@ body {
   border: none;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
 }
-.main .portfolio__section .work__card .modal__window {
-  left: 10%;
-  top: 10%;
-  width: 80%;
-  height: 80%;
-}
-.main .portfolio__section .work__card .modal__window .modal__container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main .portfolio__section .work__card .modal__window .modal__container .left__container img {
-  height: 400px;
-  width: auto;
-}
+
 .footer {
   display: flex;
   position: absolute;
@@ -147,7 +132,7 @@ body {
   font-size: 20px;
 }
 
-#glitch-bg {
+#glitch__bg {
   display: block;
   position: fixed;
   top: 0;
@@ -156,4 +141,141 @@ body {
   height: 100%;
   z-index: -1;
   background-color: #262626;
+}
+
+dialog.modal__window {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  max-width: 1400px;
+  background-color: #262626 !important;
+  border: none;
+  color: #fff;
+  padding: 0;
+  z-index: 9999;
+}
+dialog.modal__window::backdrop {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+dialog.modal__window .modal__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  padding: 32px;
+}
+@media (max-width: 900px) {
+  dialog.modal__window .modal__container {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+dialog.modal__window .modal__container .left__container {
+  position: relative;
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+dialog.modal__window .modal__container .left__container img.slide {
+  display: none;
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #58FF63;
+  animation: fade 0.5s ease-in-out;
+}
+dialog.modal__window .modal__container .left__container img.slide.active {
+  display: block;
+}
+dialog.modal__window .modal__container .left__container .carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #262626;
+  color: #58FF63;
+  border: 1px solid #58FF63;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+dialog.modal__window .modal__container .left__container .carousel__button:hover {
+  background-color: #58FF63;
+  color: #000;
+}
+dialog.modal__window .modal__container .left__container .prev__slide {
+  left: -22px;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%, 0% 20%);
+}
+dialog.modal__window .modal__container .left__container .next__slide {
+  right: -22px;
+  clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
+}
+dialog.modal__window .modal__container .left__container .buttons__container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+dialog.modal__window .modal__container .left__container .buttons__container .link__button {
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  color: #01B3FF;
+  border: 1px solid #01B3FF;
+  padding: 10px 24px;
+  transition: 0.3s;
+}
+dialog.modal__window .modal__container .left__container .buttons__container .link__button:hover {
+  background-color: #01B3FF;
+  color: #000;
+}
+dialog.modal__window .modal__container .right__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+dialog.modal__window .modal__container .right__container .text__container p {
+  margin-bottom: 16px;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+}
+dialog.modal__window .modal__container .right__container .close__dialog__button {
+  align-self: flex-end;
+  background: transparent;
+  border: 1px solid #58FF63;
+  color: #58FF63;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  padding: 10px 30px;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+dialog.modal__window .modal__container .right__container .close__dialog__button:hover {
+  background-color: #58FF63;
+  color: #262626;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
