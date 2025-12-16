@@ -65,20 +65,23 @@ body {
                 .cv__buttons {
                     display: flex;
                     gap: 12px;
-                    button {
+                    .profile__button {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
                         font-family: "Space Grotesk", sans-serif;
-                        background-color: $green-color;
+                        background-color: transparent;
+                        color: $green-color;
                         font-size: 20px;
                         height: 64px;
                         padding: 5px 40px;
-                        border: none;
-                        clip-path: polygon(
-                            0 0,
-                            100% 0 ,
-                            100% 100%,
-                            30px 100% ,
-                            0 calc(100% - 30px)
-                        );
+                        border: 1px solid $green-color;
+                        text-decoration: none;
+                        
+                        &:hover {
+                            background-color: $green-color;
+                            color: $main-color;
+                        }
                     }
                 }
 
@@ -86,20 +89,24 @@ body {
                     display: flex;
                     gap: 12px;
                     margin-top: 16px;
-                    button {
+                    .profile__button {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
                         font-family: "Space Grotesk", sans-serif;
-                        background-color: $blue-color;
+                        background-color: transparent;
+                        color: $blue-color;
                         font-size: 20px;
                         height: 64px;
                         padding: 5px 40px;
                         border: none;
-                        clip-path: polygon(
-                            0 0,
-                            100% 0 ,
-                            100% 100%,
-                            30px 100% ,
-                            0 calc(100% - 30px)
-                        );
+                        border: 1px solid $blue-color;
+                        text-decoration: none;
+                        
+                        &:hover {
+                        background-color: $blue-color;
+                        color: $main-color;
+                        }
                     }
                 }
             }
@@ -118,37 +125,46 @@ body {
             display: flex;
             flex-direction: column;
             height: 400px;
+            width: 450px;
             justify-content: center;
             align-items: center;
-            border: solid 2px $green-color;
             gap: 20px;
             
             img {
-                width: 300px;
+                width: 250px;
             }
 
             h3 {
                 color: $blue-color;
+                font-size: 20px;
             }
 
             p {
-                color: $blue-color;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                color: #ffffff;
+                font-size: 18px;
             }
 
-            button {
+            .dialog__button {
                 font-family: "Space Grotesk", sans-serif;
-                background-color: $green-color;
+                background-color: transparent;
+                color: $green-color;
                 font-size: 18px;
                 height: 44px;
                 padding: 5px 30px;
-                border: none;
-                clip-path: polygon(
-                    0 0,
-                    100% 0 ,
-                    100% 100%,
-                    30px 100% ,
-                    0 calc(100% - 30px)
-                );
+                border: 1px $green-color solid;
+
+                &:hover {
+                    background-color: $green-color;
+                    color: $main-color;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.17);
+                animation: fade 0.7s ease-in-out;
             }
         }
     }
@@ -258,16 +274,18 @@ dialog.modal__window {
                     background-color: $green-color;
                     color: #000;
                 }
+
+                .carousel__icon {
+                    width: 10px;
+                }
             }
 
             .prev__slide {
-                left: -22px; 
-                clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%, 0% 20%);
+                left: -22px;
             }
 
             .next__slide {
                 right: -22px; 
-                clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
             }
 
             .buttons__container {
@@ -301,9 +319,14 @@ dialog.modal__window {
 
             .text__container p {
                 margin-bottom: 16px;
-                color: #ddd;
+                color: #dadada;
                 font-size: 16px;
                 line-height: 1.6;
+            }
+
+            .text__container h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
             }
 
             .close__dialog__button {
@@ -315,7 +338,6 @@ dialog.modal__window {
                 font-size: 16px;
                 padding: 10px 30px;
                 cursor: pointer;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
 
                 &:hover {
                     background-color: $green-color;

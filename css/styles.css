@@ -58,28 +58,45 @@ body {
   display: flex;
   gap: 12px;
 }
-.main .profile__section .info__container .cv__buttons__container .cv__buttons button {
+.main .profile__section .info__container .cv__buttons__container .cv__buttons .profile__button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   font-family: "Space Grotesk", sans-serif;
-  background-color: #58FF63;
+  background-color: transparent;
+  color: #58FF63;
   font-size: 20px;
   height: 64px;
   padding: 5px 40px;
-  border: none;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+  border: 1px solid #58FF63;
+  text-decoration: none;
+}
+.main .profile__section .info__container .cv__buttons__container .cv__buttons .profile__button:hover {
+  background-color: #58FF63;
+  color: #262626;
 }
 .main .profile__section .info__container .cv__buttons__container .letter__buttons {
   display: flex;
   gap: 12px;
   margin-top: 16px;
 }
-.main .profile__section .info__container .cv__buttons__container .letter__buttons button {
+.main .profile__section .info__container .cv__buttons__container .letter__buttons .profile__button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   font-family: "Space Grotesk", sans-serif;
-  background-color: #01B3FF;
+  background-color: transparent;
+  color: #01B3FF;
   font-size: 20px;
   height: 64px;
   padding: 5px 40px;
   border: none;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+  border: 1px solid #01B3FF;
+  text-decoration: none;
+}
+.main .profile__section .info__container .cv__buttons__container .letter__buttons .profile__button:hover {
+  background-color: #01B3FF;
+  color: #262626;
 }
 .main .portfolio__section {
   display: flex;
@@ -93,28 +110,41 @@ body {
   display: flex;
   flex-direction: column;
   height: 400px;
+  width: 450px;
   justify-content: center;
   align-items: center;
-  border: solid 2px #58FF63;
   gap: 20px;
 }
 .main .portfolio__section .work__card img {
-  width: 300px;
+  width: 250px;
 }
 .main .portfolio__section .work__card h3 {
   color: #01B3FF;
+  font-size: 20px;
 }
 .main .portfolio__section .work__card p {
-  color: #01B3FF;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 18px;
 }
-.main .portfolio__section .work__card button {
+.main .portfolio__section .work__card .dialog__button {
   font-family: "Space Grotesk", sans-serif;
-  background-color: #58FF63;
+  background-color: transparent;
+  color: #58FF63;
   font-size: 18px;
   height: 44px;
   padding: 5px 30px;
-  border: none;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+  border: 1px #58FF63 solid;
+}
+.main .portfolio__section .work__card .dialog__button:hover {
+  background-color: #58FF63;
+  color: #262626;
+}
+.main .portfolio__section .work__card:hover {
+  transform: scale(1.17);
+  animation: fade 0.7s ease-in-out;
 }
 
 .footer {
@@ -216,13 +246,14 @@ dialog.modal__window .modal__container .left__container .carousel__button:hover 
   background-color: #58FF63;
   color: #000;
 }
+dialog.modal__window .modal__container .left__container .carousel__button .carousel__icon {
+  width: 10px;
+}
 dialog.modal__window .modal__container .left__container .prev__slide {
   left: -22px;
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%, 0% 20%);
 }
 dialog.modal__window .modal__container .left__container .next__slide {
   right: -22px;
-  clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
 }
 dialog.modal__window .modal__container .left__container .buttons__container {
   display: flex;
@@ -251,9 +282,13 @@ dialog.modal__window .modal__container .right__container {
 }
 dialog.modal__window .modal__container .right__container .text__container p {
   margin-bottom: 16px;
-  color: #ddd;
+  color: #dadada;
   font-size: 16px;
   line-height: 1.6;
+}
+dialog.modal__window .modal__container .right__container .text__container h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 dialog.modal__window .modal__container .right__container .close__dialog__button {
   align-self: flex-end;
@@ -264,7 +299,6 @@ dialog.modal__window .modal__container .right__container .close__dialog__button 
   font-size: 16px;
   padding: 10px 30px;
   cursor: pointer;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px));
 }
 dialog.modal__window .modal__container .right__container .close__dialog__button:hover {
   background-color: #58FF63;
