@@ -7,6 +7,7 @@
 body {
   background-color: #262626;
   font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -148,13 +149,14 @@ body {
 }
 
 .footer {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  bottom: auto;
+  margin-top: 60px;
+  padding-bottom: 20px;
   width: 100%;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer p {
   margin-bottom: 32px;
@@ -311,5 +313,111 @@ dialog.modal__window .modal__container .right__container .close__dialog__button:
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .main .portfolio__section {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 0 20px;
+  }
+  .footer {
+    position: relative;
+    bottom: auto;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .main {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 900px) {
+  body:has(dialog[open]) {
+    overflow: hidden;
+    touch-action: none;
+  }
+  .main .profile__section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .main .profile__section .picture__container {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .main .profile__section .info__container {
+    margin-left: 0;
+    height: auto;
+  }
+  .main .profile__section .info__container .cv__buttons__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  dialog.modal__window {
+    width: 95%;
+    height: 90%;
+  }
+  dialog.modal__window .modal__container {
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  dialog.modal__window .modal__container .left__container {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  dialog.modal__window .modal__container .left__container img.slide {
+    height: 250px;
+  }
+  dialog.modal__window .modal__container .right__container {
+    gap: 20px;
+  }
+  dialog.modal__window .modal__container .right__container .close__dialog__button {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .header .heading {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .main .profile__section .picture__container img {
+    width: 200px;
+    height: 200px;
+  }
+  .main .profile__section .info__container .profile__name {
+    font-size: 28px;
+  }
+  .main .profile__section .info__container .cv__buttons__container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main .profile__section .info__container .cv__buttons__container .cv__buttons, .main .profile__section .info__container .cv__buttons__container .letter__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .profile__section .info__container .cv__buttons__container .cv__buttons .profile__button, .main .profile__section .info__container .cv__buttons__container .letter__buttons .profile__button {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .main .portfolio__section .work__card {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+  .main .portfolio__section .work__card img {
+    width: 80%;
+    height: auto;
+  }
+  .main .portfolio__section .work__card:hover {
+    transform: none;
+    animation: none;
   }
 }/*# sourceMappingURL=styles.css.map */
