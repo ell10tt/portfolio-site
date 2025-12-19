@@ -114,6 +114,7 @@ body {
   width: 450px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 20px;
 }
 .main .portfolio__section .work__card img {
@@ -138,6 +139,7 @@ body {
   height: 44px;
   padding: 5px 30px;
   border: 1px #58FF63 solid;
+  cursor: pointer;
 }
 .main .portfolio__section .work__card .dialog__button:hover {
   background-color: #58FF63;

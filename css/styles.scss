@@ -129,6 +129,7 @@ body {
             width: 450px;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
             gap: 20px;
             
             img {
@@ -156,6 +157,7 @@ body {
                 height: 44px;
                 padding: 5px 30px;
                 border: 1px $green-color solid;
+                cursor: pointer;
 
                 &:hover {
                     background-color: $green-color;
